@@ -24,7 +24,7 @@ class AesEncyptionController
      */
     public function __construct()
     {
-        $this->key=KEY;
+        $this->key=ENC_KEY;
         $this->iv=AES_IV;
     }
     /**
