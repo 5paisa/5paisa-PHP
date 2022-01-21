@@ -40,7 +40,7 @@ class AuthController
     public function loginRequestMobileNewbyEmail($requestData = null, $headerData = null)
     {
         $method='POST';
-        $apiUrl=BASE_URL."V2/LoginRequestMobileNewbyEmail";
+        $apiUrl=BASE_URL."V4/LoginRequestMobileNewbyEmail";
         $headerType='WITHOUT_COOKIE';
         $data=$this->commanHelper->makeApi($requestData, $headerData, REQUEST_CODE_LOGIN, 'login', $headerType);
         return $this->commanCurl->callApi($method, $apiUrl, $data['reqData'], $data['headData'], $resHead = 1);
