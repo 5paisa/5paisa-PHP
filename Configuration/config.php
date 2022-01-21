@@ -13,6 +13,7 @@ define("EMAIL_ID", "{GET FROM 5PAISA}"); //NOTE: If not encrypted then do encryp
 define("EMAIL_PASSWORD", "{GET FROM 5PAISA}");//NOTE: If not encrypted then do encrypted by AesEncontroller's encrypt method
 define("MY2PIN", "{GET FROM 5PAISA}");//NOTE: If not encrypted then do encrypted by AesEncontroller's encrypt method
 define("CLIENT_CODE", "{GET FROM 5PAISA}");
+define("ENC_KEY", "{GET FROM 5PAISA}");
 
 
 define('AES_256_CBC', 'aes-256-cbc');
