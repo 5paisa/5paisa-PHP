@@ -77,6 +77,7 @@ class RequestHelperController
       */
     public function loginRequestParam($requestCode)
     {
+        $aes = new AesEncyptionController();
         $headArry=array('appName'=>APP_NAME,
                         'appVer'=>APP_VERSION,
                         'key'=>KEY,
@@ -86,8 +87,8 @@ class RequestHelperController
                         'password'=>PASSWORD,
                        );
 
-        $bodyArry=array('Email_id'=>EMAIL_ID,
-                        'Password'=>EMAIL_PASSWORD,
+        $bodyArry=array('Email_id'=>$aes->encrypt(EMAIL_ID),
+                        'Password'=>$aes->encrypt(EMAIL_PASSWORD),
                         'LocalIP'=>'123.123.123.123',
                         'PublicIP'=>'123.123.123.12',
                         'HDSerailNumber'=>'',
@@ -95,7 +96,7 @@ class RequestHelperController
                         'MachineID'=>'039377',
                         'VersionNo'=>'1.7',
                         'RequestNo'=>'1',
-                        'My2PIN'=>MY2PIN,
+                        'My2PIN'=>$aes->encrypt(MY2PIN),
                         'ConnectionType'=>"1"
                         );
 
